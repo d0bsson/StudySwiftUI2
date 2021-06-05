@@ -11,6 +11,7 @@
 		D7F8ED9B266A615C000A8A78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8ED9A266A615C000A8A78 /* ContentView.swift */; };
 		D7F8ED9D266A615E000A8A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F8ED9C266A615E000A8A78 /* Assets.xcassets */; };
 		D7F8EDA0266A615E000A8A78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F8ED9F266A615E000A8A78 /* Preview Assets.xcassets */; };
+		D7F8EDAA266A6B8B000A8A78 /* ColorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8EDA9266A6B8B000A8A78 /* ColorSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		D7F8ED9C266A615E000A8A78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7F8ED9F266A615E000A8A78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D7F8EDA1266A615E000A8A78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7F8EDA9266A6B8B000A8A78 /* ColorSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				D7F8ED98266A615C000A8A78 /* StudySwiftUI2App.swift */,
 				D7F8ED9A266A615C000A8A78 /* ContentView.swift */,
+				D7F8EDA9266A6B8B000A8A78 /* ColorSlider.swift */,
 				D7F8ED9C266A615E000A8A78 /* Assets.xcassets */,
 				D7F8EDA1266A615E000A8A78 /* Info.plist */,
 				D7F8ED9E266A615E000A8A78 /* Preview Content */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7F8ED9B266A615C000A8A78 /* ContentView.swift in Sources */,
+				D7F8EDAA266A6B8B000A8A78 /* ColorSlider.swift in Sources */,
 				D7F8ED99266A615C000A8A78 /* StudySwiftUI2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
