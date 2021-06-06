@@ -7,22 +7,22 @@
 
 import SwiftUI
 
-
-
 struct UserView: View {
-    let redValue = 0.0
-    let greenValue = 0.0
-    let blueValue = 0.0
-    
+    let redValue: Double
+    let greenValue: Double
+    let blueValue: Double
     
     var body: some View {
-        Text("")
         Color(.sRGB, red: redValue, green: greenValue, blue: blueValue, opacity: 1)
+            .frame(width: 375, height: 200, alignment: .center)
+            .cornerRadius(30)
+            .padding(.bottom, 50)
     }
 }
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        UserView()
+        UserView(redValue: 232, greenValue: 22,
+            blueValue: 0)
     }
 }

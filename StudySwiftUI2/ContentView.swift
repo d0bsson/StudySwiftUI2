@@ -8,18 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+//    @State private var redSliderValue = 255.0
+//    @State private var greenSliderValue = 255.0
+//    @State private var blueSliderValue = 255.0
+    
     var body: some View {
-        ZStack(){
+        ZStack{
             Color(.systemGray2)
                 .ignoresSafeArea()
             VStack{
-                UserView()                    .frame(width: 350, height: 145, alignment: .center)
-                    .padding(.bottom, 50.0)
+                UserView(redValue: 0,
+                         greenValue: 0,
+                         blueValue: 0)
                 ColorSlider(color: .red)
                 ColorSlider(color: .green)
                 ColorSlider(color: .blue)
             }
-            .padding(.bottom, 300.0)
+            .padding(.bottom, 250)
         }
     }
 }

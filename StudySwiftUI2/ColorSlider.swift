@@ -23,6 +23,7 @@ struct ColorSlider: View {
             TextField("0", text: $userValue)
                 .frame(width: 50, height: 50, alignment: .trailing)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+            
         }
     }
     
