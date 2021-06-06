@@ -10,16 +10,17 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack(){
-            Color(.systemBlue)
+            Color(.systemGray2)
                 .ignoresSafeArea()
             VStack{
+                UserView()                    .frame(width: 350, height: 145, alignment: .center)
+                    .padding(.bottom, 50.0)
                 ColorSlider(color: .red)
                 ColorSlider(color: .green)
                 ColorSlider(color: .blue)
             }
-            
+            .padding(.bottom, 300.0)
         }
-        
     }
 }
 

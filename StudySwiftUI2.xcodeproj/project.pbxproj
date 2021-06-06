@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D75478F3266D28BD0000BF20 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75478F2266D28BD0000BF20 /* UserView.swift */; };
 		D7F8ED99266A615C000A8A78 /* StudySwiftUI2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8ED98266A615C000A8A78 /* StudySwiftUI2App.swift */; };
 		D7F8ED9B266A615C000A8A78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8ED9A266A615C000A8A78 /* ContentView.swift */; };
 		D7F8ED9D266A615E000A8A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F8ED9C266A615E000A8A78 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D75478F2266D28BD0000BF20 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		D7F8ED95266A615C000A8A78 /* StudySwiftUI2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudySwiftUI2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F8ED98266A615C000A8A78 /* StudySwiftUI2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySwiftUI2App.swift; sourceTree = "<group>"; };
 		D7F8ED9A266A615C000A8A78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				D7F8ED98266A615C000A8A78 /* StudySwiftUI2App.swift */,
 				D7F8ED9A266A615C000A8A78 /* ContentView.swift */,
 				D7F8EDA9266A6B8B000A8A78 /* ColorSlider.swift */,
+				D75478F2266D28BD0000BF20 /* UserView.swift */,
 				D7F8ED9C266A615E000A8A78 /* Assets.xcassets */,
 				D7F8EDA1266A615E000A8A78 /* Info.plist */,
 				D7F8ED9E266A615E000A8A78 /* Preview Content */,
@@ -143,6 +146,7 @@
 			files = (
 				D7F8ED9B266A615C000A8A78 /* ContentView.swift in Sources */,
 				D7F8EDAA266A6B8B000A8A78 /* ColorSlider.swift in Sources */,
+				D75478F3266D28BD0000BF20 /* UserView.swift in Sources */,
 				D7F8ED99266A615C000A8A78 /* StudySwiftUI2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
