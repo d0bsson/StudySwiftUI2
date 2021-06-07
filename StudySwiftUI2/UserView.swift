@@ -19,13 +19,17 @@ struct UserView: View {
               opacity: 1)
             .frame(width: 375, height: 200, alignment: .center)
             .cornerRadius(30)
-            
+            .overlay(
+                RoundedRectangle(cornerRadius: 30)
+                    .stroke(Color.white, lineWidth: 3)
+            )
     }
 }
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        UserView(redValue: 255, greenValue: 255,
-            blueValue: 255)
+        UserView(redValue: 4,
+                 greenValue: 4,
+                 blueValue: 255)
     }
 }

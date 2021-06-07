@@ -17,8 +17,9 @@ struct ContentView: View {
     @State private var greenUserValue = ""
     @State private var blueUserValue = ""
     
+    @State private var showAlert = false
+    
     var body: some View {
-        
         ZStack{
             Color(.systemGray2)
                 .ignoresSafeArea()
@@ -36,7 +37,6 @@ struct ContentView: View {
                             userValue: $blueUserValue,
                             color: .blue)
             }
-            .padding(.bottom, 250)
         }
     }
 }
@@ -50,6 +50,7 @@ struct ContentView_Previews: PreviewProvider {
 struct ColorSlider: View {
     @Binding var value: Double
     @Binding var userValue: String
+    
     let color: Color
     
     var body: some View {
@@ -59,9 +60,24 @@ struct ColorSlider: View {
                 .frame(width: 45, height: 25, alignment: .center)
             Slider(value: $value, in: 0...255, step: 1)
                 .accentColor(color)
-            TextField("0", text: $userValue)
-                .frame(width: 50, height: 50, alignment: .trailing)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+            UserText(value: $userValue)
+        }
+    }
+}
+
+struct UserText: View {
+    @Binding var value: String
+    
+    var body: some View {
+        TextField("0", text: $value)
+            .padding(.trailing, 8.0)
+            .frame(width: 50, height: 50, alignment: .trailing)
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+        }
+    
+    private func checkUserValue() {
+        if let _ = Double(value) {
+            value = ""
         }
     }
 }
