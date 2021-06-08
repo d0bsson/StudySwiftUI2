@@ -17,7 +17,6 @@ struct ContentView: View {
     @State private var greenUserValue = ""
     @State private var blueUserValue = ""
     
-    @State private var showAlert = false
     
     var body: some View {
         ZStack{
@@ -60,24 +59,43 @@ struct ColorSlider: View {
                 .frame(width: 45, height: 25, alignment: .center)
             Slider(value: $value, in: 0...255, step: 1)
                 .accentColor(color)
-            UserText(value: $userValue)
+                .onChange(of: value) { isOnFocus in
+                    userValue = "\(lround(isOnFocus))"
+                }
+                .onAppear {
+                    userValue = "\(lround(value))"
+                }
+            UserText(textValue: $userValue, value: $value)
         }
     }
 }
 
 struct UserText: View {
-    @Binding var value: String
+    @Binding var textValue: String
+    @Binding var value: Double
+    
+    @State private var showAlert = false
     
     var body: some View {
-        TextField("0", text: $value)
+        TextField("0", text: $textValue, onCommit: checkUserValue)
             .padding(.trailing, 8.0)
-            .frame(width: 50, height: 50, alignment: .trailing)
+            .frame(width: 75, height: 50, alignment: .trailing)
             .textFieldStyle(RoundedBorderTextFieldStyle())
-        }
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("Неверные данные"),
+                      message: Text("Введите число от 0 до 255"),
+                      dismissButton: .cancel())
+            }
+    }
     
     private func checkUserValue() {
-        if let _ = Double(value) {
-            value = ""
+        if let value = Int(textValue), (0...255).contains(value) {
+            self.value = Double(value)
+            return
         }
+        showAlert.toggle()
+        value = 0
+        textValue = "0"
     }
 }
+
